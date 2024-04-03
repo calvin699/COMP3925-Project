@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music & Health</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("music.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+      float: left;
+    }
+
+    .text-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+
+  <script src="javascripts/piechart.js"></script>
+  <script src="javascripts/MusicEffects.js"></script>
+  <script src="javascripts/FavGenreCount.js"></script>
+  <script src="javascripts/InsomniaOCDMusicEffect.js"></script>
+  <script src="javascripts/InsomniaOCDMusicEffect(1).js"></script>
+  <script src="javascripts/DepressionAnxietyMusicEffect.js"></script>
+  <script src="javascripts/DepressionAnxietyMusicEffect(1).js"></script>
+  <script src="javascripts/ValenceLevel.js"></script>
+  <script src="javascripts/EnergyLevel.js"></script>
+  <script src="javascripts/OCDMusicEffect.js"></script>
+  <script src="javascripts/Depression.js"></script>
+  <script src="javascripts/TempoLevel.js"></script>
+  <script src="javascripts/AnxietyFrequency.js"></script>
+  <script src="javascripts/DepressionFrequency.js"></script>
+  <script src="javascripts/DanceabilityLevel.js"></script>
+  <script src="javascripts/InsomniaFrequency.js"></script>
+  <script src="javascripts/OCDFrequency.js"></script>
+
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#background" class="w3-button w3-block w3-black">Background</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#musiceffect" class="w3-button w3-block w3-black">Music Effect</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#favourite" class="w3-button w3-block w3-black">Favourite genre</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#musiceffect&participants" class="w3-button w3-block w3-black">Music effects and Participants</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#differentmusic" class="w3-button w3-block w3-black">Different music genres</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Music & Mental health?</span>
+    </div>
+  </header>
+
+  <div id="background">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">How the music genre and<p>
+          information affect mental health?
+  </div>
+  </span></h5>
+  <div class="text-container">
+    <p>Our data analysis is to find the relationship between the music genre, the music information (Danceability,
+      Energy, Key, Loudness, Speechness, Tempo etc.) and mental health (including Anxiety, Depression, Insomnia and
+      OCD). We would like to find out if mental health patients like to hear which genre of music and those music
+      genres get the same characteristics to guess how the music genre and information affect mental health.
+    </p>
+  </div>
+
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Music Effect</span></h5>
+
+  <div id="chartdiv"></div>
+  <div class="text-container" id="musiceffect">
+    <p>Music has a positive impact on mental health.
+      Regardless of the type of music participants listened to and regardless of whether
+      they suffered from severe ,moderate
+      or low levels of insomnia, obsessive-compulsive disorder
+      depression, or anxiety,
+      most participants agreed that
+      listening to music helped improve their mental health.
+      However, a minority of participants with high levels of
+      OCD and depression believed music was more likely
+      to worsen their mental health.</p>
+  </div>
+
+
+  <div id="favourite">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The favourite genre of participants;
+        Rock is the most popular, with pop ranking second
+  </div>
+  </span></h5>
+  <div id="chartdiv_FavGenreCount" style="width:100%; height: 500px"></div>
+
+
+
+  <h5 class="w3-center w3-padding-48" id="musiceffect&participants"><span class="w3-tag w3-wide">The relationship
+      between music effects and
+      participants with varying degrees of insomnia
+    </span></h5>
+  <div id="chartdiv_InsomniaOCDMusicEffect" style="width:100%; height:500px"></div>
+
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">the relationship between music effects and
+      participants with varying degrees of obsessive-compulsive disorder (OCD)
+    </span></h5>
+  <div id="chartdiv_OCDMusicEffect" style="width:100%; height:500px"></div>
+
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The relationship between music effects and
+      participants with varying degrees of depression
+    </span></h5>
+
+  <div id="chartdiv_DepressionAnxietyMusicEffect" style="width:100%; height:500px"></div>
+
+
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The relationship between music effects and
+      participants with varying degrees of anxiety
+    </span></h5>
+
+  <div id="chartdiv_DepressionAnxietyMusicEffect(1)" style="width:100%; height:500px"></div>
+
+  <div id="differentmusic"></div>
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The valence levels of different music genres
+    </span></h5>
+</body>
+</div>
+
+<div id="chartdiv_ValenceLevel" style="width:100%; height:500px"></div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The energy levels of different music genres.
+  </span></h5>
+<div id="chartdiv_EnergyLevel" style="width:100%; height:500px"></div>
+
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The valence levels of different music genres
+  </span></h5>
+<div id="chartdiv_TempoLevel" style="width:100%; height:500px"></div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The energy levels of different music genres
+  </span></h5>
+<div id="chartdiv_DanceabilityLevel" style="width:100%; height:500px"></div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The relationship between different levels of
+    insomnia participants and different types of music genres
+  </span></h5>
+<div id="chartdiv_InsomniaFrequency" style="width:100%; height:500px"></div>
+<div class="text-container">
+  <p>In terms of insomnia participants, most of the high-level insomnia participants listen to jazz music,
+    which has the highest levels of negative valence and the lowest energy levels, implying that listening to Jazz
+    songs that sound sad or depressed and have a low loudness or volume level could be more effective for
+    improving severe insomnia participants. In contrast, most of the low-level insomnia participants listen to
+    Country music, which has the highest level of allegro tempo, implying that listening to Country songs at a
+    faster speed could be more effective for improving low-level insomnia participants.</p>
+</div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The relationship between different levels of
+    Obsessive-Compulsive Disorder (OCD) <p></p>participants and different types of music genres
+  </span></h5>
+<div id="chartdiv_OCDFrequency" style="width:100%; height:500px"></div>
+<div class="text-container">
+  <p>In terms of OCD participants, most of the high-level OCD participants listen to Electronic music, which has the
+    second highest level of allegro tempo and quite a high level of danceability and energy, implying that listening
+    to Electronic songs with a faster pace, high danceability, and loudness could be more effective for improving
+    severe OCD participants. In contrast, most of the low-level OCD participants listen to Classical music, which has
+    the highest level of moderate tempo, implying that listening to Classical songs with a relaxed or leisurely pace
+    could be more effective for improving low-level OCD participants.</p>
+</div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The relationship between diff. levels of depression
+    participants and diff. types of music genres</span></h5>
+<div id="chartdiv_AnxietyFrequency" style="width:100%; height:500px"></div>
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"> The relationship between diff. levels of depression
+    participants and diff. types of music genres</span></h5>
+<div id="chartdiv_DepressionFrequency" style="width:100%; height:500px"></div>
+<div class="text-container">
+  <p>In terms of depression and anxiety participants, most of the high-level depression and anxiety participants
+    listen to Hip-pop music, which has a quite high level of energy and danceability, implying that listening to
+    Hip-pop songs with high loudness and danceability could be more effective for improving severe depression and
+    anxiety participants. In contrast, most of the low-level depression and anxiety participants listen to Latin
+    music, which has the highest level of positive valence and danceability, implying that listening to Latin songs
+    that sound happier or more cheerful and have huge danceability could be more effective for improving low-level
+    depression and anxiety participants.
+  </p>
+</div>
+</body>
+
+</html>
